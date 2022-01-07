@@ -49,4 +49,4 @@ rails db:create db:migrate db:seed
 ```
 Then go to your favorite browser and type localhost:3000 in your search bar.
 
-##### Hope you appreciate it!
+#### There you go!
