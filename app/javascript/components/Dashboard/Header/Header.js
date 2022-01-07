@@ -1,11 +1,13 @@
 import React from 'react'
 
 // Styles
-import {} from './Header.styles'
+import { Wrapper } from './Header.styles'
 
 const Header = () => {
   return(
-    <div></div>
+    <Wrapper>
+      <h2>Memory Dashboard</h2>
+    </Wrapper>
   )
 }
 

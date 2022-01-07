@@ -1,11 +1,14 @@
 import React from 'react'
 
 // Styles
-import {} from './InfoBox.styles'
+import { Wrapper } from './InfoBox.styles'
 
-const InfoBox = () => {
-  return(
-    <div></div>
+const InfoBox = ({title, content}) => {
+  return (
+    <Wrapper>
+      <h4>{title}</h4>
+      <h2>{content}</h2>
+    </Wrapper>
   )
 }
 
