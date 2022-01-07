@@ -41,6 +41,6 @@ export const GraphBorder = styled.div`
 export const GraphBar = styled.div`
   width: 50px;
   height: 150px;
-  background-color: #264653;
+  background-color: #083D77;
   border-radius: 10px 10px 0px 0px;
 `

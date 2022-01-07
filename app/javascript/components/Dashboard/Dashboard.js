@@ -12,6 +12,7 @@ import Summary from "./Summary/Summary"
 
 const Dashboard = () => {
   const [memories, setMemories] = useState([])
+  const [selectedCountry, setSelectedCountry] = useState('All')
 
   // Get data from localStorage if present
   const sessionState = sessionStorage.getItem('memoriesState')
@@ -32,11 +33,18 @@ const Dashboard = () => {
     }
   }, [memories.length])
 
+  // Create a list of countries to send to the selector
+  const memoryCountryList = memories.map( memory => {
+    return(memory.country)
+  })
+
   return(
     <Layout>
       <Wrapper>
         <Header />
-        <Selector />
+        <Selector 
+          countries={memoryCountryList}
+          setSelectedCountryCallback={selectedCountry => setSelectedCountry(selectedCountry)} />
         <Summary />
         <Graph />
       </Wrapper>
