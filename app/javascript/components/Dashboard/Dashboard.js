@@ -38,6 +38,9 @@ const Dashboard = () => {
     return(memory.country)
   })
 
+  // Set current memory as the selected country's memory
+  const currentMemory = memories.find((memory) => memory.country == selectedCountry)
+
   return(
     <Layout>
       <Wrapper>
@@ -45,7 +48,8 @@ const Dashboard = () => {
         <Selector 
           countries={memoryCountryList}
           setSelectedCountryCallback={selectedCountry => setSelectedCountry(selectedCountry)} />
-        <Summary />
+        <Summary 
+          memory={currentMemory} />
         <Graph />
       </Wrapper>
     </Layout>
