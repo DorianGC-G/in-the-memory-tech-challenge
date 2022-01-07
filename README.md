@@ -1,24 +1,52 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Here\'s my entry for In The Memory\'s tech challenge, coded with Ruby on Rails and React.js.
+You\'ll find a few useful informations in this readme.
 
-Things you may want to cover:
 
-* Ruby version
+* **Versions**
+The project runs with Ruby 2.7.3, Rails 6.1.4 and React 17.0.2 .
 
-* System dependencies
+* **Gems & packages**
+The project uses [activerecord-import](https://github.com/zdennis/activerecord-import), [Axios](https://github.com/axios/axios) and [Styled Components](https://styled-components.com/).
 
-* Configuration
+## Installation
 
-* Database creation
+### Check your Ruby version
 
-* Database initialization
+```shell
+ruby -v
+```
 
-* How to run the test suite
+The ouput should start with something like `ruby 2.7.3`
 
-* Services (job queues, cache servers, search engines, etc.)
+If not, install the right ruby version using [rbenv](https://github.com/rbenv/rbenv) (it could take a while):
 
-* Deployment instructions
+```shell
+rbenv install 2.7.3
+```
 
-* ...
+### Install dependencies
+
+Using [Bundler](https://github.com/bundler/bundler) and [Yarn](https://github.com/yarnpkg/yarn):
+
+```shell
+bundle && yarn
+```
+
+### Initialize the database
+
+```shell
+rails db:create db:migrate db:seed
+```
+(this will take a while)
+
+### Fire up the server
+First run:
+
+```shell
+rails db:create db:migrate db:seed
+```
+Then go to your favorite browser and type localhost:3000 in your search bar.
+
+##### Hope you appreciate it!
