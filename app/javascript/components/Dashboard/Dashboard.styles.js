@@ -9,7 +9,7 @@ export const Layout = styled.div`
 export const Wrapper = styled.div`
   background: white;
   max-width: var(--maxWidth);
-  min-width: 500px;
+  min-width: 510px;
   padding: 10px 15px;
   border: 1px solid black;
   border-radius: 10px;

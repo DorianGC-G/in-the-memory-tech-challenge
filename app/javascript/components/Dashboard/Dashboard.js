@@ -37,10 +37,21 @@ const Dashboard = () => {
   const memoryCountryList = memories.map( memory => {
     return(memory.country)
   })
-
+  
   // Set current memory as the selected country's memory
   const currentMemory = memories.find((memory) => memory.country == selectedCountry)
-
+  
+  // Extract monthly view from global data
+  let monthlyView = []
+  if (currentMemory != undefined) {
+    for (const key in currentMemory.revenue_per_month) {
+      let month = []
+      month.push(`${key.slice(28, 35)}`)
+      month.push(`${currentMemory.revenue_per_month[key]}`)
+      monthlyView.push(month)
+    }
+  }
+  
   return(
     <Layout>
       <Wrapper>
@@ -50,7 +61,9 @@ const Dashboard = () => {
           setSelectedCountryCallback={selectedCountry => setSelectedCountry(selectedCountry)} />
         <Summary 
           memory={currentMemory} />
-        <Graph />
+        <Graph 
+          monthlyView={monthlyView}
+          country={selectedCountry} />
       </Wrapper>
     </Layout>
   )
