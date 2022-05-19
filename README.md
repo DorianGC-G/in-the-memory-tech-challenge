@@ -45,7 +45,7 @@ rails db:create db:migrate db:seed
 First run:
 
 ```shell
-rails db:create db:migrate db:seed
+rails s
 ```
 Then go to your favorite browser and type localhost:3000 in your search bar.
 
